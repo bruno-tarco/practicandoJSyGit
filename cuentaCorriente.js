@@ -3,9 +3,9 @@ import { Cliente } from "./Cliente.js";
 export class CuentaCorriente
 {
     #cliente;
-    numero;
+    numero;//atributo
     agencia;
-    #saldo;
+    #saldo;//atributo privado
     static cantidadCuentas = 0; //esto se refiere a la variable en forma general
 
     set setcliente(valor) {
@@ -22,7 +22,8 @@ export class CuentaCorriente
         this.numero = numero;
         this.agencia = agencia;
         this.#saldo = 0;
-        CuentaCorriente.cantidadCuentas++;
+        CuentaCorriente.cantidadCuentas++;   //CuentaCorriente sería el objeto y cantidadCuentas sería las propiedades que se le asigna
+        
     }
 
     depositoEnCuenta(valor) {
