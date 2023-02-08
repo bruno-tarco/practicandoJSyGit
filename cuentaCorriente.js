@@ -7,6 +7,7 @@ export class CuentaCorriente
 
 
     constructor(){
+        //se trata de buenas prácticas asignar el valor null a las variables que están vacias
         this.cliente = null;  //este dato es del tipo objeto, null = no existe pero está implícito
         this.numero = "";
         this.agencia = "";
