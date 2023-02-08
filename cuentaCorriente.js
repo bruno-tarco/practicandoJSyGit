@@ -16,10 +16,10 @@ export class CuentaCorriente
         return this.#cliente;
     }
    //se trata de buenas prácticas asignar el valor null a las variables que están vacias
-    constructor() {
-        this.#cliente = null;
-        this.numero = '';
-        this.agencia = '';
+    constructor(cliente, numero, agencia) {
+        this.setcliente = cliente;
+        this.numero = numero;
+        this.agencia = agencia;
         this.#saldo = 0;
     }
 
