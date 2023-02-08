@@ -6,6 +6,7 @@ export class CuentaCorriente
     numero;
     agencia;
     #saldo;
+    static cantidadCuentas = 0; //esto se refiere a la variable en forma general
 
     set setcliente(valor) {
         if (valor instanceof Cliente)  //si el valor recibido es una instancia de la clase cliente, entonces se logró atribuir la referencia de cliente
@@ -21,6 +22,7 @@ export class CuentaCorriente
         this.numero = numero;
         this.agencia = agencia;
         this.#saldo = 0;
+        CuentaCorriente.cantidadCuentas++;
     }
 
     depositoEnCuenta(valor) {
